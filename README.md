@@ -1,2 +1,3 @@
 # clone-tabnews
-Projeto para treinamento e aprendizado 
+
+Projeto para treinamento e aprendizado
