@@ -10,11 +10,6 @@ test("GET to /api/v1/status should return 200", async () => {
   expect(responseBody.version).toEqual("16.0");
   expect(responseBody.dependencies.database.max_connections).toEqual(100);
   expect(responseBody.dependencies.database.opened_connections).toEqual(1);
-  console.log(
-    responseBody.version,
-    responseBody.dependencies.database.max_connections,
-    responseBody.dependencies.database.opened_connections,
-  );
 });
 
 //1 - versão do postgres
