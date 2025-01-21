@@ -4,7 +4,7 @@ import Error from "next/error";
 async function waitForAllServices() {
   await waitForWebServer();
 
-  async function waitForWebServer(params) {
+  async function waitForWebServer() {
     return retry(fetchStatusPage, {
       retries: 100,
       maxTimeout: 1000,
@@ -19,6 +19,8 @@ async function waitForAllServices() {
   }
 }
 
-export default {
+const orchestrator = {
   waitForAllServices,
 };
+
+export default orchestrator;
