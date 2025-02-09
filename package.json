@@ -7,7 +7,7 @@
     "dev": "npm run service:up && npm run service:wait:database && npm run migration:up && next dev",
     "test": "npm run service:up && concurrently --n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "posttest": "npm run service:stop",
-    "test:watch": "jest --runInBand --watchAll",
+    "test:watch": "jest --runInBand --watchAll --verbose",
     "service:up": "docker compose -f infra/compose.yaml up -d",
     "service:down": "docker compose -f infra/compose.yaml down",
     "service:stop": "docker compose -f infra/compose.yaml stop",
