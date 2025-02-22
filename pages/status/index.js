@@ -1,4 +1,3 @@
-import { version } from "react";
 import useSWR from "swr";
 
 async function fetchAPI(key) {
@@ -8,10 +7,6 @@ async function fetchAPI(key) {
 }
 
 export default function statusPage() {
-  const response = useSWR("/api/v1/status", fetchAPI, {
-    refreshInterval: 2000,
-  });
-
   return (
     <>
       <h1>Status</h1>
